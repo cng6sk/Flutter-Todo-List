@@ -238,6 +238,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_gradient_app_bar:
+    dependency: "direct main"
+    description:
+      name: flutter_gradient_app_bar
+      sha256: "41867af88f1723fb76ce8aa1cc90a4b1492398445c755055b8a01b6b81950639"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.1"
   flutter_hooks:
     dependency: "direct main"
     description:
@@ -379,6 +387,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  logger:
+    dependency: "direct main"
+    description:
+      name: logger
+      sha256: "7ad7215c15420a102ec687bb320a7312afd449bac63bfb1c60d9787c27b9767f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
   logging:
     dependency: transitive
     description:
