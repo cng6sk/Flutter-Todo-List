@@ -3,7 +3,7 @@
 
 这是一个 **Flutter 练习项目**，旨在构建一个简单但功能完善的 **Todo List 应用**。此项目适合作为 Flutter 初学者的学习练习，也可以作为一个结构化的教程，帮助理解 Flutter 应用开发。
 
-中文|[English](README.md)
+中文 | [English](README.md)
 
 ---
 

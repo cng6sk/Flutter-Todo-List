@@ -4,7 +4,7 @@ This is a **Flutter practice project** aimed at building a simple yet functional
 
 ---
 
-[中文](README.zh.md)|English
+[中文](README.zh.md) | English
 
 ## Features
 

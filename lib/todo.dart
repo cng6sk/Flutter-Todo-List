@@ -9,11 +9,20 @@ part 'todo.g.dart';
 
 
 /// ============================================================
-/// Todo
-/// WTD：
-/// 设置时间
-/// 提醒时间
+/// TODO Due Date 设置到期时间/提醒时间
+/// TODO Completed At 任务完成的时间(已完成的排序)
+/// TODO tag 添加标签
+/// TODO Priority 设置优先级
+/// TODO Subtasks 创建多个子任务
 /// ============================================================
+
+enum Priority {
+  lowest, 
+  low, 
+  medium, 
+  high, 
+  highest 
+}
 
 @immutable
 class Todo {
@@ -21,11 +30,37 @@ class Todo {
     required this.title,
     required this.id,
     this.completed = false,
+    this.dueDate,
+    this.completedAt,
+    this.tags = const [],
+    this.priority = Priority.medium,
+    this.subTasks = const [],
   });
+
 
   final String id;
   final String title;
   final bool completed;
+  final DateTime? dueDate; 
+  final DateTime? completedAt;
+  final List<String> tags;
+  final Priority priority;
+  final List<SubTodo> subTasks;
+}
+
+@immutable
+class SubTodo {
+  const SubTodo({
+    required this.title,
+    required this.id,
+    this.completed = false,
+    this.dueDate,
+  });
+
+  final String id;
+  final String title;   
+  final bool completed;
+  final DateTime? dueDate; 
 }
 
 /// ============================================================
@@ -38,11 +73,21 @@ class TodoList extends _$TodoList {
 
   @override
   List<Todo> build({required String title, required String id, bool completed = false}) {
+    // XXX: for test
     return [
       Todo(title: title, id: id, completed: completed),
-      Todo(title: 'Set up your profile', id: '0001', completed: false),
-      Todo(title: 'Add your first task', id: '0002', completed: false),
-      Todo(title: 'Complete the tutorial', id: '0003', completed: false),
+      Todo(
+        title: 'Set up your profile', id: '0001', 
+        completed: false, dueDate: DateTime(2024, 12, 31, 11, 00),
+      ),
+      Todo(
+        title: 'Add your first task', id: '0002', 
+        completed: false, dueDate: DateTime(2024, 11, 17, 23, 00),
+      ),
+      Todo(
+        title: 'Complete the tutorial', id: '0003', 
+        completed: false, dueDate: DateTime(2024, 11, 17, 22, 00),
+      ),
       Todo(title: 'Organize your workspace', id: '0004', completed: false),
       Todo(title: 'Plan your day', id: '0005', completed: false),
       Todo(title: 'Sync with your calendar', id: '0006', completed: false),
@@ -96,7 +141,7 @@ final todoListInit = TodoListProvider(title: "What can I say...", id: "0000");
 
 
 /// ============================================================
-/// TodoList筛选
+/// 需要激活的TodoList筛选
 /// 因为没有Notifier，所以我就直接使用Provider
 /// ============================================================
 

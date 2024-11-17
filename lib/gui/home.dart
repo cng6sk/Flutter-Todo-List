@@ -5,7 +5,7 @@ import 'package:flutter_todolist/uiElements/appBars.dart';
 import 'package:flutter_todolist/utils/CustomColors.dart';
 import 'package:flutter_todolist/todo.dart';
 
-
+// TODO: 添加按钮
 class Home extends HookConsumerWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -139,52 +139,3 @@ class Home extends HookConsumerWidget {
 
 }
 
-// Container(
-//         width: MediaQuery.of(context).size.width,
-//         child: ListView(
-//           scrollDirection: Axis.vertical,
-//           children: <Widget>[
-//             Container(
-//               margin: EdgeInsets.fromLTRB(20, 0, 20, 15),
-//               padding: EdgeInsets.fromLTRB(5, 13, 5, 13),
-//               child: Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                 children: <Widget>[
-//                   Image.asset('assets/images/checked-empty.png'),
-//                   Text(
-//                     '13.00 PM',
-//                     style: TextStyle(color: CustomColors.textGrey),
-//                   ),
-//                   Container(
-//                     width: 180,
-//                     child: Text(
-//                       'Email client',
-//                       style: TextStyle(
-//                           color: CustomColors.textHeader,
-//                           fontWeight: FontWeight.w600),
-//                     ),
-//                   ),
-//                   Image.asset('assets/images/bell-small.png'),
-//                 ],
-//               ),
-//               decoration: BoxDecoration(
-//                 gradient: LinearGradient(
-//                   stops: [0.015, 0.015],
-//                   colors: [CustomColors.greenIcon, Colors.white],
-//                 ),
-//                 borderRadius: BorderRadius.all(
-//                   Radius.circular(5.0),
-//                 ),
-//                 boxShadow: [
-//                   BoxShadow(
-//                     color: CustomColors.greyBorder,
-//                     blurRadius: 10.0,
-//                     spreadRadius: 5.0,
-//                     offset: Offset(0.0, 0.0),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ]
-//         ),
-//       );
